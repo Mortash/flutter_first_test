@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_test/random_words.dart';
+import 'package:flutter_first_test/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,15 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Startup Name Generator'),
-        ),
-        body: const Center(
-          child: RandomWords(),
-        ),
-      ),
-    );
+        title: 'Welcome to Flutter',
+        theme: defineTheme(),
+        home: const RandomWords());
   }
 }
